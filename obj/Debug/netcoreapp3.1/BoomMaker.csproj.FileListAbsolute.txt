@@ -1,0 +1,13 @@
+C:\Users\Thomas\Documents\Github\BoomMaker\bin\Debug\netcoreapp3.1\BoomMaker.exe
+C:\Users\Thomas\Documents\Github\BoomMaker\bin\Debug\netcoreapp3.1\BoomMaker.deps.json
+C:\Users\Thomas\Documents\Github\BoomMaker\bin\Debug\netcoreapp3.1\BoomMaker.runtimeconfig.json
+C:\Users\Thomas\Documents\Github\BoomMaker\bin\Debug\netcoreapp3.1\BoomMaker.runtimeconfig.dev.json
+C:\Users\Thomas\Documents\Github\BoomMaker\bin\Debug\netcoreapp3.1\BoomMaker.dll
+C:\Users\Thomas\Documents\Github\BoomMaker\bin\Debug\netcoreapp3.1\BoomMaker.pdb
+C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.csprojAssemblyReference.cache
+C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.AssemblyInfoInputs.cache
+C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.AssemblyInfo.cs
+C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.dll
+C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.pdb
+C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.genruntimeconfig.cache
