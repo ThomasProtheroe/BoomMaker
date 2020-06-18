@@ -7,8 +7,6 @@ namespace BoomMaker
         //Gun Components
         protected Dictionary<string, Component> components;
         protected List<Mod> mods;
-        protected string[] requiredComponents = {"body", "barrel", "grip", "stock", "ammunition"};
-        protected string[] optionalComponents = {"scope"};
 
         //Core Attributes
         private float damage = 0;
@@ -19,6 +17,7 @@ namespace BoomMaker
         private float recoilControl = 0;
         private float velocity = 0;
         private float capacity = 0;
+        private int firingMode = 0;
 
         //Variable Attributes
         private float recoil;
@@ -26,19 +25,38 @@ namespace BoomMaker
 
         public void calculateCoreAttributes() {
             foreach(KeyValuePair<string, Component> component in components) {
-                addAttributesToCore(component.Value.getAttributes());
+                foreach(KeyValuePair<string, float> attribute in component.Value.getAttributes()) {
+                    addAttributeToCore(attribute.Key, attribute.Value, component.Value.getAttributeOperator(attribute.Key));
+                }
             }
         }
 
-        private void addAttributesToCore(float[] attributes) {
-            damage += attributes[BoomMaker.CONST_DAMAGE];
-            shots += attributes[BoomMaker.CONST_SHOTS];
-            rateOfFire += attributes[BoomMaker.CONST_ROF];
-            deviation += attributes[BoomMaker.CONST_DEVIATION];
-            recoilRate += attributes[BoomMaker.CONST_RECOIL_RATE];
-            recoilControl += attributes[BoomMaker.CONST_RECOIL_CONTROL];
-            velocity += attributes[BoomMaker.CONST_VELOCITY];
-            capacity += attributes[BoomMaker.CONST_CAPACITY];
+        private void addAttributeToCore(string attribute, float compValue, string attributeOperator) {
+            //Deal with attributes requiring special handling
+            if (attribute == "firingMode") {
+                firingMode = (int)compValue;
+            }
+            //Get the correct field to add the attribute to
+            var currentVal = this.GetType().GetField(attribute).GetValue(this);
+            float newVal;
+            switch(attributeOperator) {
+                case "+":
+                    newVal = (float)currentVal + compValue;
+                    this.GetType().GetField(attribute).SetValue(this, newVal);
+                break;
+                case "-":
+                    newVal = (float)currentVal - compValue;
+                    this.GetType().GetField(attribute).SetValue(this, newVal);
+                break;
+                case "*":
+                    newVal = (float)currentVal * compValue;
+                    this.GetType().GetField(attribute).SetValue(this, newVal);
+                break;
+                case "/":
+                    newVal = (float)currentVal / compValue;
+                    this.GetType().GetField(attribute).SetValue(this, newVal);
+                break;
+            }
         }
 
         public void addComponent(Component newComponent) {
@@ -48,10 +66,6 @@ namespace BoomMaker
             }
 
             components.Add(type, newComponent);
-        }
-
-        public string[] getRequiredComponents() {
-            return requiredComponents;
         }
     }
 }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "P0Xyg/U4zq1Krio4iU/Y2UVQtWkscnmJdxHBLfYYUKJn3WwdD5oPpJu66G1g2rEXSU6MuYlQzTTElOPFKAaHJQ==",
+  "dgSpecHash": "X2OthYzXVliVnFh8tUeF4OpCtWVhb7j/l53B9x9TXqsP5drdVYwUQRoJvD9KqZu1XYGra2NZlzSr7bBnDWebpw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Thomas\\Documents\\Github\\BoomMaker\\BoomMaker.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Thomas\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
