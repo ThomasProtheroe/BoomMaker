@@ -1,0 +1,59 @@
+[
+    {
+        "name":"Standard",
+        "type":"barrel",
+        "attributes":{
+            "velocity":20
+        },
+        "operators": {
+            "velocity":"+"
+        }
+    },
+    {
+        "name":"Long",
+        "type":"barrel",
+        "attributes":{
+            "damage":1.15,
+            "deviation":1,
+            "recoilRate":1.2,
+            "velocity":50
+        },
+        "operators": {
+            "damage":"*",
+            "deviation":"-",
+            "recoilRate":"*",
+            "velocity":"+"
+        }
+    },
+    {
+        "name":"Short",
+        "type":"barrel",
+        "attributes":{
+            "damage":0.90,
+            "deviation":2,
+            "recoilControl":1.2,
+            "velocity":25
+        },
+        "operators": {
+            "damage":"*",
+            "deviation":"+",
+            "recoilControl":"*",
+            "velocity":"-"
+        }
+    },
+    {
+        "name":"Vented",
+        "type":"barrel",
+        "attributes":{
+            "damage":0.90,
+            "recoilRate":0.9,
+            "velocity":25
+        },
+        "operators": {
+            "damage":"*",
+            "deviation":"+",
+            "recoilRate":"*",
+            "velocity":"-"
+        }
+    }
+]

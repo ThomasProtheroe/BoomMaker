@@ -1,0 +1,33 @@
+[
+    {
+        "name":"Standard",
+        "type":"grip",
+        "attributes":{}
+    },
+    {
+        "name":"Padded",
+        "type":"grip",
+        "attributes":{
+            "deviation":2,
+            "recoilRate":0.85,
+            "movementRecoilRate":1,
+            "movementRecoilCap":5
+        },
+        "operators": {
+            "deviation":"+",
+            "recoilControl":"*",
+            "movementRecoilRate":"+",
+            "movementRecoilCap":"+"
+        }
+    },
+    {
+        "name":"Contoured",
+        "type":"grip",
+        "attributes":{
+            "deviation":1
+        },
+        "operators": {
+            "deviation":"-"
+        }
+    }
+]

@@ -7,6 +7,7 @@ namespace BoomMaker
     {
         //Attributes
         private string type;
+        private string name;
         private Dictionary<string, float> attributes;
 
         //Attribute operators
@@ -14,10 +15,16 @@ namespace BoomMaker
 
         public Component(string inType) {
             type = inType;
+            attributes = new Dictionary<string, float> ();
+            attributeOperators = new Dictionary<string, string> ();
         }
 
         public Dictionary<string, float> getAttributes() {
             return attributes;
+        }
+
+        public void setName(string inName) {
+            name = inName;
         }
 
         public float getAttribute(string attribute) {
@@ -46,6 +53,10 @@ namespace BoomMaker
 
         public string getType() {
             return type;
+        }
+
+        public string getName() {
+            return name;
         }
     }
 }

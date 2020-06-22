@@ -11,3 +11,5 @@ C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.csp
 C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.dll
 C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.pdb
 C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.genruntimeconfig.cache
+C:\Users\Thomas\Documents\Github\BoomMaker\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Thomas\Documents\Github\BoomMaker\obj\Debug\netcoreapp3.1\BoomMaker.csproj.CopyComplete

@@ -1,0 +1,43 @@
+[
+    {
+        "name":"FMJ",
+        "type":"ammunition",
+        "attributes":{}
+    },
+    {
+        "name":"HP",
+        "type":"ammunition",
+        "attributes":{
+            "damage":1.15,
+            "armorPiercing":10
+        },
+        "operators": {
+            "damage":"*",
+            "armorPiercing":"-"
+        }
+    },
+    {
+        "name":"AP",
+        "type":"ammunition",
+        "attributes":{
+            "damage":0.90,
+            "armorPiercing":15
+        },
+        "operators": {
+            "damage":"*",
+            "armorPiercing":"+"
+        }
+    },
+    {
+        "name":"High Velocity",
+        "type":"ammunition",
+        "attributes":{
+            "damage":1.05,
+            "velocity":100
+        },
+        "operators": {
+            "damage":"*",
+            "velocity":"+"
+        }
+    }
+]

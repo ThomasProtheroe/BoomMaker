@@ -6,7 +6,10 @@ namespace BoomMaker
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Gun newGun = BoomMaker.BuildGun();
+            Console.WriteLine("Here's your new gun:");
+            Console.WriteLine(newGun.getComponentsString());
+            Console.WriteLine(newGun.getAttributesString());
         }
     }
 }

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace BoomMaker
 {
@@ -13,20 +13,10 @@ namespace BoomMaker
         public const int CONST_FIREMODE_BURST = 2;
         public const int CONST_FIREMODE_AUTO = 3;
 
-        public const int CONST_DAMAGE = 0;
-        public const int CONST_SHOTS = 1;
-        public const int CONST_ROF = 2;
-        public const int CONST_DEVIATION = 3;
-        public const int CONST_RECOIL_RATE = 4;
-        public const int CONST_RECOIL_CONTROL = 5;
-        public const int CONST_VELOCITY = 6;
-        public const int CONST_CAPACITY = 7;
-        public const int CONST_FIREMODE = 8;
-
         //Component Data
-        private static Dictionary<string, List<Component>> componentsData;
-        private static string[] requiredComponents = {"body", "barrel", "grip", "stock", "ammunition"};
-        private static string[] optionalComponents = {"scope"};
+        private static Dictionary<string, List<Component>> componentsData = new Dictionary<string, List<Component>>();
+        private static string[] requiredComponents = {"body", "barrel", "grip", "ammunition"};
+        private static string[] optionalComponents = {"stock", "sight"};
 
         public static Gun BuildGun(string[] filter=null) {
             if (componentsData.Count == 0) {
@@ -48,10 +38,10 @@ namespace BoomMaker
                 }
             } catch (Exception e) {
                 Console.WriteLine("Unable to find all needed component type files: {0}", e.Message);
-                throw;
             }
-            
 
+            newGun.calculateCoreAttributes();
+            
             return newGun;
         }
 
@@ -62,17 +52,29 @@ namespace BoomMaker
                 string path = "Data/" + componentType + ".json";
 
                 var jsonText = System.IO.File.ReadAllText(@path);
-                JObject jsonObject = JObject.Parse(jsonText);
+                JArray data = (JArray)JsonConvert.DeserializeObject(jsonText);
 
                 //Loop through objects in the JSON array and build a component from each
-                Console.Write(jsonObject.Children());
-                Component newComponent = new Component(componentType);
+                foreach(var jsonComponent in data.Children()) {
+                    Component newComponent = new Component(componentType);
+                    newComponent.setName((string)jsonComponent.SelectToken("name"));
+                    if (jsonComponent.SelectToken("attributes") != null) {
+                        foreach(JProperty property in jsonComponent.SelectToken("attributes").Children<JProperty>()) {
+                            newComponent.setAttribute(property.Name, (float)property.Value);
+                        }
+                    }
 
-                //newComponent.setAttributes(valuesFloat);
-                //tempComponents.Add(newComponent);
+                    if (jsonComponent.SelectToken("operators") != null) {
+                        foreach(JProperty property in jsonComponent.SelectToken("operators").Children<JProperty>()) {
+                            newComponent.setAttributeOperator(property.Name, (string)property.Value);
+                        }
+                    }
+                    
+                    tempComponents.Add(newComponent);
+                }
 
                 //Add the finished component list to the component dictionary
-                //componentsData.Add(componentType, tempComponents);
+                componentsData.Add(componentType, tempComponents);
             }
         }
     }
