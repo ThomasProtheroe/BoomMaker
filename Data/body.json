@@ -21,7 +21,7 @@
             "capacity":10,
             "firingMode":1
         },
-        "tags": ["testTag", "testTag2"]
+        "tags": []
     },
     {
         "name":"Revolover",

@@ -42,7 +42,7 @@
             "recoilControl":"*",
             "velocity":"-"
         },
-        "tags": ["testTag3"]
+        "tags": []
     },
     {
         "name":"Vented",
