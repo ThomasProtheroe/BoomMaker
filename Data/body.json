@@ -20,7 +20,8 @@
             "velocity":200,
             "capacity":10,
             "firingMode":1
-        }
+        },
+        "tags": ["testTag", "testTag2"]
     },
     {
         "name":"Revolover",
@@ -43,7 +44,8 @@
             "velocity":250,
             "capacity":6,
             "firingMode":1
-        }
+        },
+        "tags": []
     },
     {
         "name":"Rifle",
@@ -66,7 +68,8 @@
             "velocity":300,
             "capacity":20,
             "firingMode":3
-        }
+        }, 
+        "tags": []
     },
     {
         "name":"Shotgun",
@@ -89,7 +92,8 @@
             "velocity":180,
             "capacity":8,
             "firingMode":1
-        }
+        },
+        "tags": []
     },
     {
         "name":"SMG",
@@ -112,7 +116,8 @@
             "velocity":200,
             "capacity":30,
             "firingMode":3
-        }
+        },
+        "tags": []
     },
     {
         "name":"LMG",
@@ -135,5 +140,6 @@
             "capacity":50,
             "firingMode":3
         }
+        ,"tags": []
     }
 ]

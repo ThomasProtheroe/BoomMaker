@@ -2,7 +2,7 @@
     {
         "name":"Standard",
         "type":"grip",
-        "attributes":{}
+        "tags": []
     },
     {
         "name":"Padded",
@@ -18,7 +18,8 @@
             "recoilControl":"*",
             "movementRecoilRate":"+",
             "movementRecoilCap":"+"
-        }
+        },
+        "tags": []
     },
     {
         "name":"Contoured",
@@ -28,6 +29,7 @@
         },
         "operators": {
             "deviation":"-"
-        }
+        },
+        "tags": []
     }
 ]

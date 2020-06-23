@@ -69,6 +69,14 @@ namespace BoomMaker
                             newComponent.setAttributeOperator(property.Name, (string)property.Value);
                         }
                     }
+
+                    if (jsonComponent.SelectToken("tags") != null) {
+                        List<string> tagList = new List<string> ();
+                        string[] tagArr = jsonComponent["tags"].ToObject<string[]>();
+                        //string[] tagArr = jsonComponent.SelectToken("tags").Children<JProperty>().Value<string[]>();
+                        tagList.AddRange(tagArr);
+                        newComponent.addTags(tagList);
+                    }
                     
                     tempComponents.Add(newComponent);
                 }

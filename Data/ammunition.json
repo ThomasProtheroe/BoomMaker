@@ -2,7 +2,7 @@
     {
         "name":"FMJ",
         "type":"ammunition",
-        "attributes":{}
+        "tags": []
     },
     {
         "name":"HP",
@@ -14,7 +14,8 @@
         "operators": {
             "damage":"*",
             "armorPiercing":"-"
-        }
+        },
+        "tags": []
     },
     {
         "name":"AP",
@@ -26,7 +27,8 @@
         "operators": {
             "damage":"*",
             "armorPiercing":"+"
-        }
+        },
+        "tags": []
     },
     {
         "name":"High Velocity",
@@ -38,6 +40,7 @@
         "operators": {
             "damage":"*",
             "velocity":"+"
-        }
+        },
+        "tags": []
     }
 ]

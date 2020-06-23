@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BoomMaker
 {
@@ -9,6 +10,7 @@ namespace BoomMaker
         private string type;
         private string name;
         private Dictionary<string, float> attributes;
+        private List<string> tags;
 
         //Attribute operators
         private Dictionary<string, string> attributeOperators;
@@ -17,14 +19,11 @@ namespace BoomMaker
             type = inType;
             attributes = new Dictionary<string, float> ();
             attributeOperators = new Dictionary<string, string> ();
+            tags = new List<string> ();
         }
 
         public Dictionary<string, float> getAttributes() {
             return attributes;
-        }
-
-        public void setName(string inName) {
-            name = inName;
         }
 
         public float getAttribute(string attribute) {
@@ -51,12 +50,31 @@ namespace BoomMaker
             attributeOperators.Add(attribute, op);
         }
 
+        public void addTag(string tag){
+            tags.Add(tag);
+        }
+
+        public void addTags(List<string> inTags) {
+            tags = tags.Union(inTags).ToList();
+        }
+
+        public bool hasTag(string tag) {
+            if (tags.Contains(tag)) {
+                return true;
+            }
+            return false;
+        }
+
         public string getType() {
             return type;
         }
 
         public string getName() {
             return name;
+        }
+
+        public void setName(string inName) {
+            name = inName;
         }
     }
 }

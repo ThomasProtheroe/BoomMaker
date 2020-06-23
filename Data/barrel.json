@@ -7,7 +7,8 @@
         },
         "operators": {
             "velocity":"+"
-        }
+        },
+        "tags": []
     },
     {
         "name":"Long",
@@ -23,7 +24,8 @@
             "deviation":"-",
             "recoilRate":"*",
             "velocity":"+"
-        }
+        },
+        "tags": []
     },
     {
         "name":"Short",
@@ -39,7 +41,8 @@
             "deviation":"+",
             "recoilControl":"*",
             "velocity":"-"
-        }
+        },
+        "tags": ["testTag3"]
     },
     {
         "name":"Vented",
@@ -54,6 +57,7 @@
             "deviation":"+",
             "recoilRate":"*",
             "velocity":"-"
-        }
+        },
+        "tags": []
     }
 ]
