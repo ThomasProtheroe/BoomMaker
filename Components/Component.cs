@@ -11,6 +11,8 @@ namespace BoomMaker
         private string name;
         private Dictionary<string, float> attributes;
         private List<string> tags;
+        private List<string> requiredTypes;
+        private List<string> excludedTags;
 
         //Attribute operators
         private Dictionary<string, string> attributeOperators;
@@ -20,6 +22,8 @@ namespace BoomMaker
             attributes = new Dictionary<string, float> ();
             attributeOperators = new Dictionary<string, string> ();
             tags = new List<string> ();
+            requiredTypes = new List<string> ();
+            excludedTags = new List<string> ();
         }
 
         public Dictionary<string, float> getAttributes() {
@@ -75,6 +79,21 @@ namespace BoomMaker
 
         public void setName(string inName) {
             name = inName;
+        }
+
+        public List<string> getRequiredTypes() {
+            return requiredTypes;
+        }
+
+        public bool hasRequiredTypes() {
+            if (requiredTypes.Count > 0) {
+                return true;
+            }
+            return false;
+        }
+
+        public void addRequiredTypes(List<string> inTypes) {
+            requiredTypes = requiredTypes.Union(inTypes).ToList();
         }
     }
 }

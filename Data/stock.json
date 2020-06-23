@@ -1,0 +1,23 @@
+[
+    {
+        "name":"Standard",
+        "type":"stock"
+    },
+    {
+        "name":"Lightweight",
+        "type":"stock",
+        "attributes":{
+            "recoilControl":0.9,
+            "handlingRecoilControl":1.25,
+            "handlingRecoilCap":5,
+            "movementRecoilControl":2
+        },
+        "operators": {
+            "recoilControl":"*",
+            "handlingRecoilControl":"*",
+            "handlingRecoilCap":"-",
+            "movementRecoilControl":"+"
+        },
+        "tags": []
+    }
+]

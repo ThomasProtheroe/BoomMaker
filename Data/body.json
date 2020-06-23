@@ -69,7 +69,10 @@
             "capacity":20,
             "firingMode":3
         }, 
-        "tags": []
+        "tags": [],
+        "requirements": {
+            "requiredTypes": ["stock"]
+        }
     },
     {
         "name":"Shotgun",
@@ -93,7 +96,10 @@
             "capacity":8,
             "firingMode":1
         },
-        "tags": []
+        "tags": [],
+        "requirements": {
+            "requiredTypes": ["stock"]
+        }
     },
     {
         "name":"SMG",
@@ -139,7 +145,10 @@
             "velocity":275,
             "capacity":50,
             "firingMode":3
+        },
+        "tags": [],
+        "requirements": {
+            "requiredTypes": ["stock"]
         }
-        ,"tags": []
     }
 ]

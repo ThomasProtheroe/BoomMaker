@@ -87,7 +87,7 @@ namespace BoomMaker
         public string getComponentsString() {
             string compString = "Components:";
             foreach(KeyValuePair<string, Component> comp in components) {
-                compString += "\n" + comp.Value.getName();
+                compString += "\n" + comp.Value.getType() + ": " + comp.Value.getName();
             }
             return compString;
         }
