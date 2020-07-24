@@ -2,8 +2,12 @@ using System;
 
 namespace BoomMaker
 {
-    class Mod
+    class Mod : Component
     {
+        public Mod() : base("mod") {
+
+        }
+
         
     }
 }

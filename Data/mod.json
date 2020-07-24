@@ -1,0 +1,76 @@
+{
+    "univarsal": [
+        {
+            "name":"Gas Vent",
+            "attributes":{
+                "recoilRate":0.7
+            },
+            "operators": {
+                "recoilRate":"*"
+            },
+            "tags": []
+        }, 
+        {
+            "name":"Extended Magazine",
+            "attributes":{
+                "capacity":1.35
+            },
+            "operators": {
+                "capacity":"*"
+            },
+            "tags": []
+        },
+        {
+            "name":"Extra Barrel",
+            "attributes":{
+                "shots":1
+            },
+            "operators": {
+                "shots":"+"
+            },
+            "tags": []
+        }
+    ],
+    "restricted": [
+        {
+            "name":"Revolver",
+            "attributes":{
+                "damage":2.2,
+                "armorPiercing":10,
+                "rateOfFire":0.45,
+                "recoilRate":2.0,
+                "velocity":75,
+                "capacity":6
+            },
+            "operators": {
+                "damage":"*",
+                "armorPiercing":"+",
+                "rateOfFire":"*",
+                "recoilRate":"*",
+                "velocity":"+",
+                "capacity":"="
+            },
+            "tags": ["pistol"]
+        },
+        {
+            "name":"Sniper",
+            "attributes":{
+                "damage":4.5,
+                "armorPiercing":20,
+                "rateOfFire":5,
+                "recoilRate":5.0,
+                "velocity":1.5,
+                "capacity":0.4
+            },
+            "operators": {
+                "damage":"*",
+                "armorPiercing":"+",
+                "rateOfFire":"/",
+                "recoilRate":"*",
+                "velocity":"*",
+                "capacity":"*"
+            },
+            "tags": ["rifle"]
+        }
+    ]
+}

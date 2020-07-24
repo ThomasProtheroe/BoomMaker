@@ -21,31 +21,11 @@
             "capacity":10,
             "firingMode":1
         },
-        "tags": []
-    },
-    {
-        "name":"Revolover",
-        "type":"body",
-        "attributes":{
-            "damage":20,
-            "armorPiercing":15,
-            "shots":1,
-            "rateOfFire":1.1,
-            "deviation":2,
-            "recoilRate":10,
-            "recoilControl":13,
-            "recoilCap":45,
-            "handlingRecoilRate":0.15,
-            "handlingRecoilControl":25,
-            "handlingRecoilCap":20,
-            "movementRecoilRate":25,
-            "movementRecoilControl":20,
-            "movementRecoilCap":10,
-            "velocity":250,
-            "capacity":6,
-            "firingMode":1
-        },
-        "tags": []
+        "tags": [],
+        "requirements": {
+            "requiredTypes": [],
+            "allowedModTags": ["pistol"]
+        }
     },
     {
         "name":"Rifle",
@@ -54,7 +34,7 @@
             "damage":15,
             "armorPiercing":10,
             "shots":1,
-            "rateOfFire":7,
+            "rateOfFire":5,
             "deviation":2,
             "recoilRate":2,
             "recoilControl":9,
@@ -71,7 +51,8 @@
         }, 
         "tags": [],
         "requirements": {
-            "requiredTypes": ["stock"]
+            "requiredTypes": ["stock"],
+            "allowedModTags": ["rifle"]
         }
     },
     {
@@ -98,7 +79,8 @@
         },
         "tags": [],
         "requirements": {
-            "requiredTypes": ["stock"]
+            "requiredTypes": ["stock"],
+            "allowedModTags": ["shotgun"]
         }
     },
     {
@@ -123,7 +105,11 @@
             "capacity":30,
             "firingMode":3
         },
-        "tags": []
+        "tags": [],
+        "requirements": {
+            "requiredTypes": [],
+            "allowedModTags": ["smg"]
+        }
     },
     {
         "name":"LMG",
@@ -148,7 +134,8 @@
         },
         "tags": [],
         "requirements": {
-            "requiredTypes": ["stock"]
+            "requiredTypes": ["stock"],
+            "allowedModTags": ["lmg"]
         }
     }
 ]

@@ -72,6 +72,10 @@ namespace BoomMaker
                     newVal = (float)currentVal / compValue;
                     this.GetType().GetField(attribute).SetValue(this, newVal);
                 break;
+                case "=":
+                    newVal = compValue;
+                    this.GetType().GetField(attribute).SetValue(this, newVal);
+                break;
             }
         }
 
