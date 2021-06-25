@@ -3,7 +3,7 @@
         "name":"Pistol",
         "type":"body",
         "attributes":{
-            "damage":10,
+            "damage":11,
             "armorPiercing":0,
             "shots":1,
             "rateOfFire":2.5,
